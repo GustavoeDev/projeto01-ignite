@@ -1,0 +1,17 @@
+.header {
+  background-color: var(--gray-800);
+  padding: 1.25rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerLogo > span {
+  font-size: 1.5rem;
+  color: var(--white);
+}
