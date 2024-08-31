@@ -6,6 +6,45 @@ import styles from "./App.module.css";
 
 import "./global.css";
 
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: "https://github.com/GustavoeDev.png",
+      name: "Gustavo Emanuel",
+      role: "Web Developer",
+    },
+    content: [
+      { type: "paragraph", content: "Fala galeraa 👋" },
+      {
+        type: "paragraph",
+        content:
+          "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀",
+      },
+      { type: "link", content: "👉 jane.design/doctorcare" },
+    ],
+    publishedAt: new Date("2024-08-31 10:42:00"),
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl: "https://github.com/JoaoRoquePNeto.png",
+      name: "João Roque",
+      role: "UI Designer",
+    },
+    content: [
+      { type: "paragraph", content: "Fala galeraa 👋" },
+      {
+        type: "paragraph",
+        content:
+          "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀",
+      },
+      { type: "link", content: "👉 jane.design/doctorcare" },
+    ],
+    publishedAt: new Date("2024-09-03 10:42:00"),
+  },
+];
+
 export function App() {
   return (
     <div>
@@ -15,9 +54,15 @@ export function App() {
         <Sidebar />
 
         <main>
-          <Post />
-          <Post />
-          <Post />
+          {posts.map((post) => {
+            return (
+              <Post
+                author={post.author}
+                content={post.content}
+                publishedAt={post.publishedAt}
+              />
+            );
+          })}
         </main>
       </div>
     </div>
