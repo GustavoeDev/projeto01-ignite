@@ -1,0 +1,91 @@
+.comment {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.commentAvatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 8px;
+}
+
+.commentBox {
+  flex: 1;
+}
+
+.footerClap {
+  margin-top: 1rem;
+}
+
+.clap {
+  display: flex;
+  align-items: center;
+  background-color: var(--gray-800);
+  border: 0;
+  font-size: 0.875rem;
+  color: var(--gray-300);
+  cursor: pointer;
+}
+
+.clap svg {
+  margin-right: 0.5rem;
+}
+
+.clap span::before {
+  content: "\2022";
+  padding: 0 0.25rem;
+}
+
+.clap:hover {
+  color: var(--gray-100);
+}
+
+.clap:active {
+  color: var(--green-300);
+}
+
+.commentContent {
+  background-color: var(--gray-700);
+  padding: 1rem 1rem 1.563rem 1rem;
+  border-radius: 8px;
+}
+
+.commentContent > p {
+  font-size: 0.875rem;
+  color: var(--gray-200);
+}
+
+.commentInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.commentInfo > button {
+  border: 0;
+  background-color: var(--gray-700);
+  color: var(--gray-300);
+  cursor: pointer;
+}
+
+.commentInfo > button:hover {
+  color: var(--red-500);
+}
+
+.commentAuthor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.commentAuthor > strong {
+  font-size: 0.875rem;
+  color: var(--gray-100);
+}
+
+.commentAuthor > span {
+  font-size: 0.75rem;
+  color: var(--gray-300);
+}
